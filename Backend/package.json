@@ -1,4 +1,4 @@
-```json
+
 {
 "name": "vs-backend",
 "version": "1.0.0",
@@ -25,4 +25,3 @@
 "@prisma/client": "^5.18.0"
 }
 }
-```
