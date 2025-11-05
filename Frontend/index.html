@@ -4,109 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>VS Enterprises — Financial Risk & Tech Solutions</title>
-  <meta name="description" content="VS Enterprises — 15 years of trusted financial risk consulting and software problem resolution for the tech community. Address: Harbanshpur azamgharh 4A triple D society." />
+  <meta name="description" content="VS Enterprises — 15 years of trusted financial risk consulting and software problem resolution for the tech community. Address: Harbanshpur, Azamgarh — 4A Triple D Society." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://vs-enterprises.example/" />
+
+  <!-- Preconnects for faster font loads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#061426; --card:#0b1220; --muted:#98a0b3; --accent:#0ea5a6; --accent-2:#7c3aed; --glass: rgba(255,255,255,0.04); --radius:14px; --max-width:1200px; --gap:20px; }
-    *{box-sizing:border-box}
-    html,body{height:100%; margin:0; font-family:Inter,system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: linear-gradient(180deg,#061426 0%, #071226 40%, #071827 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
-    .container{ max-width:var(--max-width); margin:0 auto; padding:32px; }
 
-    header{ position:sticky; top:10px; z-index:60; backdrop-filter: blur(6px); background: linear-gradient(90deg, rgba(7,10,20,0.35), rgba(7,10,20,0.12)); border-radius:12px; margin:12px; padding:12px 18px; display:flex; align-items:center; gap:12px; border:1px solid rgba(255,255,255,0.03); }
-    .brand{ display:flex; gap:12px; align-items:center; min-width:0; }
-    .logo{ width:46px;height:46px;border-radius:10px; display:grid;place-items:center; font-weight:700;color:white; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 6px 20px rgba(124,58,237,0.12); flex-shrink:0; }
-    nav{ margin-left:auto; display:flex; gap:8px; align-items:center; }
-    nav a{ color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:8px; font-weight:600; font-size:14px; white-space:nowrap; }
-    nav a:hover{ color:#fff; background: rgba(255,255,255,0.03); }
+  <!-- Favicons (replace with real files) -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    /* HERO */
-    .hero{ display:grid; grid-template-columns: 1fr 420px; gap:24px; align-items:center; padding:48px 0; }
-    .hero-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:28px; box-shadow: 0 10px 40px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.03); min-height:220px; }
-    .eyebrow{ color:var(--accent); font-weight:700; letter-spacing:0.6px; font-size:13px; display:inline-block; margin-bottom:12px;}
-    .hero h1{ font-family: "Roboto Slab", serif; font-size:34px; margin:6px 0 12px; color:#fff; line-height:1.05;}
-    .hero p.lead{ color:var(--muted); margin:0 0 18px; font-size:16px;}
-    .cta-row{ display:flex; gap:12px; align-items:center; margin-top:12px;}
-    .btn{ display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:10px; font-weight:700; cursor:pointer; border: none; }
-    .btn-primary{ background: linear-gradient(90deg,var(--accent),var(--accent-2)); color:white; box-shadow:0 10px 30px rgba(14,165,166,0.12); }
-    .btn-outline{ background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04); }
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="VS Enterprises — Financial Risk & Tech Solutions" />
+  <meta property="og:description" content="15 years of financial risk, software diagnostics, and cyber resilience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vs-enterprises.example/" />
+  <meta property="og:image" content="https://vs-enterprises.example/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    .stats{ display:flex; gap:18px; margin-top:20px; color:var(--muted); flex-wrap:wrap; }
-
-    /* Card side (illustration + quick facts) */
-    .card-side{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:16px; border:1px solid rgba(255,255,255,0.03); height:100%; display:flex; flex-direction:column; justify-content:flex-start; gap:12px; }
-    .quick-list{ display:flex; flex-direction:column; gap:10px; margin-top:6px; }
-    .quick-list .item{ display:flex; gap:12px; align-items:center; }
-    .icon{ width:44px;height:44px;border-radius:10px; display:grid; place-items:center; background:var(--glass); border:1px solid rgba(255,255,255,0.03); font-weight:700; }
-
-    section{ padding:64px 0; border-bottom:1px solid rgba(255,255,255,0.02); }
-    h2.section-title{ font-family: "Roboto Slab", serif; font-size:26px; margin:0 0 12px; color:#fff; }
-    p.section-lead{ color:var(--muted); margin:0 0 18px; max-width:850px; }
-
-    /* ABOUT - fixed to avoid overlap */
-    .about-wrap{ display:flex; gap:20px; align-items:stretch; }
-    .about-main{ flex:2; min-width:0; } /* min-width 0 prevents overflow */
-    .about-side{ flex:1; min-width:260px; max-width:360px; }
-    .about-card{ background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); border-radius:12px; padding:18px; border:1px solid rgba(255,255,255,0.03); }
-
-    /* Services grid */
-    .grid{ display:grid; gap:16px; grid-template-columns: repeat(3,1fr); }
-    .service{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); min-height:130px; display:flex; flex-direction:column; justify-content:flex-start; gap:10px; }
-
-    .case-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:16px; }
-    .case{ padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); }
-
-    .team-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:16px; }
-    .member{ padding:14px; border-radius:12px; text-align:center; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); border:1px solid rgba(255,255,255,0.03); }
-    .avatar{ width:80px;height:80px;border-radius:12px;background:linear-gradient(120deg,#183447,#0f2540);display:inline-grid;place-items:center;font-weight:700;margin:8px auto;color:white;font-size:18px; }
-
-    .insights-list{ display:grid; grid-template-columns: repeat(3,1fr); gap:16px; }
-    .insight{ padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03); background:var(--card); }
-
-    .contact-grid{ display:grid; grid-template-columns: 1fr 360px; gap:18px; align-items:start; }
-    .contact-card{ padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); }
-
-    label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; font-weight:600;}
-    input[type="text"], input[type="email"], textarea{ width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:#e6eef8; font-size:14px; outline:none; }
-    textarea{ min-height:120px; resize:vertical; }
-
-    .footer{ padding:28px 0; color:var(--muted); font-size:13px; text-align:center; }
-    .footer-links{ display:flex; gap:12px; justify-content:center; margin-bottom:12px; flex-wrap:wrap; }
-
-    /* Responsive adjustments */
-    @media (max-width:1100px){
-      .hero{ grid-template-columns: 1fr; }
-      .about-wrap{ flex-direction:column; }
-      .about-side{ max-width:none; width:100%; }
-      .grid{ grid-template-columns: repeat(2,1fr); }
-      .team-grid{ grid-template-columns: repeat(2,1fr); }
-      .insights-list{ grid-template-columns: repeat(2,1fr); }
-      .contact-grid{ grid-template-columns:1fr; }
-      nav{ display:none; }
-    }
-    @media (max-width:700px){
-      .grid{ grid-template-columns: 1fr; }
-      .case-grid{ grid-template-columns:1fr; }
-      .team-grid{ grid-template-columns:1fr; }
-      .insights-list{ grid-template-columns:1fr; }
-      .hero h1{ font-size:28px; }
-      .container{ padding:18px; }
-      header{ margin:8px; padding:10px; }
-      .logo{ width:40px;height:40px; }
-      .about-side{ order:2; }
-    }
-
-    .reveal{ opacity:0; transform: translateY(8px); transition: all 640ms cubic-bezier(.2,.9,.2,1); }
-    .reveal.visible{ opacity:1; transform:none; }
-    .muted{ color:var(--muted); font-size:13px; }
-  </style>
+  <link rel="stylesheet"href="/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="container" role="banner">
-    <div class="brand" aria-hidden="false">
-      <div class="logo">VS</div>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">VS</div>
       <div style="min-width:0">
         <div style="font-weight:800; font-size:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">VS Enterprises</div>
-        <div style="font-size:12px;color:var(--muted);">15 years — Financial Risk & Software Solutions</div>
+        <div style="font-size:12px;color:var(--muted);">15 years — Financial Risk &amp; Software Solutions</div>
       </div>
     </div>
 
@@ -116,20 +45,20 @@
       <a href="#cases">Case Studies</a>
       <a href="#team">Team</a>
       <a href="#insights">Insights</a>
-      <a href="#contact" class="pill" style="background:rgba(255,255,255,0.02); padding:8px 12px; border-radius:999px;">Contact</a>
+      <a href="#contact" class="pill" style="background:rgba(255,255,255,0.08); padding:8px 12px; border-radius:999px;">Contact</a>
     </nav>
   </header>
 
-  <main class="container" role="main">
+  <main id="main" class="container" role="main">
     <!-- HERO -->
     <section class="hero" id="home" aria-label="Hero">
       <div class="hero-card reveal">
         <span class="eyebrow">Trusted since 2010</span>
-        <h1>VS Enterprises — Financial Risk & Tech Solutions</h1>
-        <p class="lead">We combine deep financial risk expertise and hands-on software problem diagnosis for technology organizations. For 15 years, we’ve reduced losses, stabilised systems, and delivered resilience across finance and engineering functions.</p>
+        <h1>VS Enterprises — Financial Risk &amp; Tech Solutions</h1>
+        <p class="lead">We combine deep financial risk expertise and hands‑on software problem diagnosis for technology organizations. For 15 years, we’ve reduced losses, stabilised systems, and delivered resilience across finance and engineering functions.</p>
 
         <div class="cta-row">
-          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Consultation</button>
+          <a class="btn btn-primary" href="#contact">Get a Consultation</a>
           <a class="btn btn-outline" href="#cases">View Case Studies</a>
         </div>
 
@@ -140,11 +69,11 @@
         </div>
 
         <div style="margin-top:16px; color:var(--muted); font-size:13px;">
-          <strong>Specialities:</strong> Financial risk modelling, credit & market risk advisory, software root-cause analysis, reliability engineering, business continuity.
+          <strong>Specialities:</strong> Financial risk modelling, credit &amp; market risk advisory, software root‑cause analysis, reliability engineering, business continuity.
         </div>
       </div>
 
-      <aside class="card-side reveal" aria-label="Illustration & Quick facts">
+      <aside class="card-side reveal" aria-label="Illustration &amp; Quick facts">
         <!-- Inline SVG hero -->
         <svg viewBox="0 0 640 360" width="100%" height="160" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
@@ -164,24 +93,24 @@
         <div style="font-weight:700">Quick Snapshot</div>
         <div class="muted">VS Enterprises — multidisciplinary specialists</div>
 
-        <div class="quick-list">
-          <div class="item"><div class="icon">📊</div><div><div style="font-weight:700">Financial Risk</div><div class="muted">Stress testing, model validation</div></div></div>
-          <div class="item"><div class="icon">💻</div><div><div style="font-weight:700">Software Diagnostics</div><div class="muted">Tracing & incident forensics</div></div></div>
-          <div class="item"><div class="icon">🛡️</div><div><div style="font-weight:700">Cyber & Data Safety</div><div class="muted">Threat modelling & remediation</div></div></div>
+        <div class="quick-list" role="list">
+          <div class="item" role="listitem"><div class="icon" aria-hidden="true">📊</div><div><div style="font-weight:700">Financial Risk</div><div class="muted">Stress testing, model validation</div></div></div>
+          <div class="item" role="listitem"><div class="icon" aria-hidden="true">💻</div><div><div style="font-weight:700">Software Diagnostics</div><div class="muted">Tracing &amp; incident forensics</div></div></div>
+          <div class="item" role="listitem"><div class="icon" aria-hidden="true">🛡️</div><div><div style="font-weight:700">Cyber &amp; Data Safety</div><div class="muted">Threat modelling &amp; remediation</div></div></div>
         </div>
 
-        <div style="margin-top:12px; border-top:1px dashed rgba(255,255,255,0.03); padding-top:12px;">
+        <address style="margin-top:12px; border-top:1px dashed rgba(255,255,255,0.16); padding-top:12px; font-style:normal;">
           <div style="font-size:13px; color:var(--muted)">Contact</div>
           <div style="font-weight:700">Email: <a href="mailto:info@vs-enterprises.example" style="color:inherit; text-decoration:underline;">info@vs-enterprises.example</a></div>
-          <div class="muted" style="font-size:13px">Address: Harbanshpur azamgharh 4A triple D society</div>
-        </div>
+          <div class="muted" style="font-size:13px">Address: Harbanshpur, Azamgarh — 4A Triple D Society</div>
+        </address>
       </aside>
     </section>
 
-    <!-- ABOUT (fixed layout) -->
+    <!-- ABOUT -->
     <section id="about" class="reveal" aria-labelledby="about-title">
       <h2 id="about-title" class="section-title">About VS Enterprises</h2>
-      <p class="section-lead">We are a specialist consultancy focused on financial risk management and software problem-solving for technology organisations. Our teams combine quantitative finance, data engineering and reliability practices to protect capital, systems and reputation.</p>
+      <p class="section-lead">We are a specialist consultancy focused on financial risk management and software problem‑solving for technology organisations. Our teams combine quantitative finance, data engineering and reliability practices to protect capital, systems and reputation.</p>
 
       <div class="about-wrap" style="margin-top:18px;">
         <div class="about-main about-card">
@@ -203,18 +132,18 @@
             <div style="background:linear-gradient(135deg,var(--accent),var(--accent-2)); padding:10px; border-radius:8px; font-weight:700;">15+</div>
             <div>
               <div style="font-weight:700">Years</div>
-              <div class="muted">Experience across finance & tech</div>
+              <div class="muted">Experience across finance &amp; tech</div>
             </div>
           </div>
 
           <div style="margin-top:12px;">
             <div style="font-weight:700">HQ</div>
-            <div class="muted">Harbanshpur azamgharh 4A triple D society</div>
+            <div class="muted">Harbanshpur, Azamgarh — 4A Triple D Society</div>
           </div>
 
           <div style="margin-top:12px;">
             <div style="font-weight:700">Approach</div>
-            <div class="muted">Practical, audit-ready, and speed-focused engagements</div>
+            <div class="muted">Practical, audit‑ready, and speed‑focused engagements</div>
           </div>
         </aside>
       </div>
@@ -223,15 +152,15 @@
     <!-- SERVICES -->
     <section id="services" class="reveal">
       <h2 class="section-title">Services</h2>
-      <p class="section-lead">Tailored services to reduce risk, improve stability, and provide audit-ready documentation.</p>
+      <p class="section-lead">Tailored services to reduce risk, improve stability, and provide audit‑ready documentation.</p>
 
       <div class="grid" style="margin-top:12px;">
-        <div class="service"><h3>Financial Risk Advisory</h3><p class="muted">Model validations, stress testing, credit & market risk assessments, capital planning, regulatory reporting support.</p></div>
-        <div class="service"><h3>Incident & Software Diagnostics</h3><p class="muted">Root-cause investigations, performance tuning, memory/cpu profiling, distributed tracing & post-incident reviews.</p></div>
-        <div class="service"><h3>Cyber Risk & Data Protection</h3><p class="muted">Threat modelling, data-loss risk remediation, secure architecture reviews and compliance readiness.</p></div>
-        <div class="service"><h3>Architecture Resilience</h3><p class="muted">Design for observability, failover patterns, disaster recovery and high-availability strategies.</p></div>
-        <div class="service"><h3>Business Continuity & Recovery</h3><p class="muted">BCP planning, tabletop exercises, runbooks and RTO/RPO definition aligned to business impact.</p></div>
-        <div class="service"><h3>Data & Model Engineering</h3><p class="muted">Robust pipelines, versioned models, reproducible analytics and data quality frameworks.</p></div>
+        <div class="service"><h3>Financial Risk Advisory</h3><p class="muted">Model validations, stress testing, credit &amp; market risk assessments, capital planning, regulatory reporting support.</p></div>
+        <div class="service"><h3>Incident &amp; Software Diagnostics</h3><p class="muted">Root‑cause investigations, performance tuning, memory/CPU profiling, distributed tracing &amp; post‑incident reviews.</p></div>
+        <div class="service"><h3>Cyber Risk &amp; Data Protection</h3><p class="muted">Threat modelling, data‑loss risk remediation, secure architecture reviews and compliance readiness.</p></div>
+        <div class="service"><h3>Architecture Resilience</h3><p class="muted">Design for observability, failover patterns, disaster recovery and high‑availability strategies.</p></div>
+        <div class="service"><h3>Business Continuity &amp; Recovery</h3><p class="muted">BCP planning, tabletop exercises, runbooks and RTO/RPO definition aligned to business impact.</p></div>
+        <div class="service"><h3>Data &amp; Model Engineering</h3><p class="muted">Robust pipelines, versioned models, reproducible analytics and data quality frameworks.</p></div>
       </div>
     </section>
 
@@ -243,30 +172,30 @@
       <div class="case-grid" style="margin-top:12px;">
         <article class="case"><h4>Credit Exposure Model Validation — Fintech</h4><p class="muted">Reduced provisioning variance by 28% and implemented CI for reproducible scoring.</p></article>
         <article class="case"><h4>SaaS Outage Forensics — Enterprise B2B</h4><p class="muted">Patched cascading failure and improved autoscaling; downtime reduced by 92%.</p></article>
-        <article class="case"><h4>Regulatory Reporting Streamline — NBFC</h4><p class="muted">Rebuilt reporting pipeline; month-end close time reduced by 40%.</p></article>
-        <article class="case"><h4>Data Leak Risk Mitigation — Healthcare Platform</h4><p class="muted">Implemented tokenization & RBAC to remediate high-risk data flows.</p></article>
+        <article class="case"><h4>Regulatory Reporting Streamline — NBFC</h4><p class="muted">Rebuilt reporting pipeline; month‑end close time reduced by 40%.</p></article>
+        <article class="case"><h4>Data Leak Risk Mitigation — Healthcare Platform</h4><p class="muted">Implemented tokenization &amp; RBAC to remediate high‑risk data flows.</p></article>
       </div>
     </section>
 
     <!-- TEAM -->
     <section id="team" class="reveal">
-      <h2 class="section-title">Leadership & Core Team</h2>
+      <h2 class="section-title">Leadership &amp; Core Team</h2>
       <p class="section-lead">A compact team of senior practitioners — quant analysts, SREs, security architects and recovery planners.</p>
 
       <div class="team-grid" style="margin-top:12px;">
-        <div class="member"><div class="avatar">AR</div><div style="font-weight:700">Amit R.</div><div class="muted">Head — Financial Risk (CFA, 12 yrs)</div></div>
-        <div class="member"><div class="avatar">NS</div><div style="font-weight:700">Neha S.</div><div class="muted">Lead — Software Reliability (M.Eng, 10 yrs)</div></div>
-        <div class="member"><div class="avatar">RK</div><div style="font-weight:700">Ravi K.</div><div class="muted">Security Architect (8 yrs)</div></div>
+        <div class="member"><div class="avatar" aria-hidden="true">AR</div><div style="font-weight:700">Amit R.</div><div class="muted">Head — Financial Risk (CFA, 12 yrs)</div></div>
+        <div class="member"><div class="avatar" aria-hidden="true">NS</div><div style="font-weight:700">Neha S.</div><div class="muted">Lead — Software Reliability (M.Eng, 10 yrs)</div></div>
+        <div class="member"><div class="avatar" aria-hidden="true">RK</div><div style="font-weight:700">Ravi K.</div><div class="muted">Security Architect (8 yrs)</div></div>
       </div>
     </section>
 
     <!-- INSIGHTS -->
     <section id="insights" class="reveal">
-      <h2 class="section-title">Insights & Articles</h2>
+      <h2 class="section-title">Insights &amp; Articles</h2>
       <p class="section-lead">Short reads and operational guidance for risk and engineering leaders.</p>
 
       <div class="insights-list" style="margin-top:12px;">
-        <div class="insight"><h4>Operational Resilience Checklist</h4><p class="muted">10-step checklist to reduce incident blast radius and shorten recovery.</p></div>
+        <div class="insight"><h4>Operational Resilience Checklist</h4><p class="muted">10‑step checklist to reduce incident blast radius and shorten recovery.</p></div>
         <div class="insight"><h4>Model Validation Best Practices</h4><p class="muted">Practical steps to validate predictive models and maintain governance.</p></div>
         <div class="insight"><h4>Designing Observability for Finance Apps</h4><p class="muted">Instrument transactional pipelines for finance systems—traces, metrics and alerts.</p></div>
       </div>
@@ -274,80 +203,73 @@
 
     <!-- CONTACT -->
     <section id="contact" class="reveal">
-      <h2 class="section-title">Contact & Office</h2>
+      <h2 class="section-title">Contact &amp; Office</h2>
       <p class="section-lead">Get in touch for an initial scoping call. We provide a short diagnostic and an engagement outline for senior teams within 72 hours.</p>
 
       <div class="contact-grid" style="margin-top:12px;">
         <form id="contactForm" class="contact-card" onsubmit="handleSubmit(event)" aria-label="Contact form">
           <label for="name">Full name</label>
-          <input id="name" name="name" required type="text" placeholder="Your name" />
+          <input id="name" name="name" autocomplete="name" required type="text" placeholder="Your name" />
           <label for="email" style="margin-top:12px;">Email</label>
-          <input id="email" name="email" required type="email" placeholder="you@company.com" />
+          <input id="email" name="email" autocomplete="email" required type="email" placeholder="you@company.com" />
           <label for="message" style="margin-top:12px;">Message / Brief</label>
           <textarea id="message" name="message" placeholder="Describe your need briefly (risk model review, outage analysis, etc.)"></textarea>
           <div style="display:flex; gap:10px; margin-top:12px;">
             <button class="btn btn-primary" type="submit">Send message</button>
             <button type="button" class="btn btn-outline" onclick="copyContact()">Copy contact</button>
           </div>
-          <div id="formNote" style="margin-top:12px; color:var(--muted); font-size:13px;">We'll respond within one business day. (Phone & secure NDA option available)</div>
+          <div id="formNote" class="muted" style="margin-top:12px; font-size:13px;">We'll respond within one business day. (Phone &amp; secure NDA option available)</div>
         </form>
 
         <div class="contact-card">
           <div class="muted"><strong>Office (Primary)</strong></div>
-          <div style="margin-top:6px">Harbanshpur azamgharh 4A triple D society</div>
-          <div style="margin-top:10px"><strong>Phone</strong><div class="muted">+91 9XXXXXXXXX</div></div>
-          <div style="margin-top:8px"><strong>Email</strong><div class="muted">info@vs-enterprises.example</div></div>
+          <div style="margin-top:6px">Harbanshpur, Azamgarh — 4A Triple D Society</div>
+          <div style="margin-top:10px"><strong>Phone</strong><div class="muted"><a href="tel:+919000000000" style="color:inherit; text-decoration:underline;">+91 90000 00000</a></div></div>
+          <div style="margin-top:8px"><strong>Email</strong><div class="muted"><a href="mailto:info@vs-enterprises.example" style="color:inherit; text-decoration:underline;">info@vs-enterprises.example</a></div></div>
           <div style="margin-top:8px"><strong>Hours</strong><div class="muted">Mon—Fri, 09:30—18:00 IST</div></div>
+          <div style="margin-top:8px"><strong>Map</strong><div class="muted"><a href="https://maps.google.com/?q=Harbanshpur%2C%20Azamgarh%20%E2%80%94%204A%20Triple%20D%20Society" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">Open in Google Maps</a></div></div>
         </div>
       </div>
     </section>
 
     <footer class="footer reveal">
-      <div class="footer-links">
-        <div style="padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.02);">Privacy</div>
-        <div style="padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.02);">Terms</div>
+      <div class="footer-links" role="list">
+        <a href="/privacy" role="listitem" style="padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.08); color:inherit; text-decoration:none;">Privacy</a>
+        <a href="/terms" role="listitem" style="padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.08); color:inherit; text-decoration:none;">Terms</a>
       </div>
-      <div>© <strong>VS Enterprises</strong> — 2010–2025 · Harbanshpur azamgharh 4A triple D society</div>
+      <div>© <strong>VS Enterprises</strong> — 2010–2025 · Harbanshpur, Azamgarh — 4A Triple D Society</div>
     </footer>
   </main>
 
-  <script>
-    // Reveal on scroll
-    const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('visible');
-      });
-    }, {threshold: 0.08});
-    revealEls.forEach(el=>io.observe(el));
-
-    // Contact form (client-only)
-    function handleSubmit(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if(!name || !email){ alert('Please provide name and email.'); return; }
-      const subject = encodeURIComponent('Contact from website — ' + name);
-      const body = encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\n\\n' + message);
-      const mailto = 'mailto:info@vs-enterprises.example?subject=' + subject + '&body=' + body;
-      window.location.href = mailto;
-      alert('Opening your mail client. If nothing opens, email us at info@vs-enterprises.example');
-    }
-
-    function copyContact(){
-      const txt = 'VS Enterprises\\ninfo@vs-enterprises.example\\nHarbanshpur azamgharh 4A triple D society';
-      navigator.clipboard?.writeText(txt).then(()=> alert('Contact details copied to clipboard.'));
-    }
-
-    document.querySelectorAll('nav a, a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (ev)=>{
-        const href = a.getAttribute('href');
-        if(!href || !href.startsWith('#')) return;
-        const el = document.querySelector(href);
-        if(el){ ev.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
-      });
-    });
+  <script src="/script.js" defer></script>
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "VS Enterprises",
+    "url": "https://vs-enterprises.example/",
+    "description": "Financial risk consulting and software diagnostics for technology organizations.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4A Triple D Society, Harbanshpur",
+      "addressLocality": "Azamgarh",
+      "addressRegion": "UP",
+      "postalCode": "",
+      "addressCountry": "IN"
+    },
+    "email": "info@vs-enterprises.example",
+    "telephone": "+91 90000 00000",
+    "areaServed": "IN",
+    "foundingDate": "2010"
+  }
   </script>
+
+  <noscript>
+    <div class="container" style="margin-top:12px">
+      <p class="muted">JavaScript is disabled. The page still works, but animations and the contact shortcut may be limited.</p>
+    </div>
+  </noscript>
 </body>
 </html>
